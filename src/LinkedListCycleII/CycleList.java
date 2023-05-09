@@ -1,20 +1,23 @@
 package LinkedListCycleII;
 
 public class CycleList {
-    class ListNode {
-        int val;
-        ListNode next;
+    public static void main(String[] args) {
+        int n = 1;
+        int x = 0;
+        int i;
+        while (n < 10) {
+            if (n % 2 != 0) {
+                for (i = 3; i * i <= n; i += 2) {
+                    if (n % i == 0)
+                        break;
+                }
+                if (i < n) {
+                    x++;
+                }
+            }
 
-        ListNode(int x) {
-            val = x;
-            next = null;
+            n++;
         }
-
-    }
-
-    public ListNode detectCycle(ListNode head) {
-        ListNode pos = null;
-
-        return pos;
+        System.out.println(x);
     }
 }
